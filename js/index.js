@@ -1,6 +1,6 @@
 (function () {
     var canvas = document.getElementById('stage'),
-        c = canvas.getContext('2d');
+    c = canvas.getContext('2d');
     window.addEventListener('resize', resizeCanvas, false);
 
     function resizeCanvas() {
@@ -9,14 +9,47 @@
     }
     resizeCanvas();
 
+    function showSidebar() {
+        $('.sidebar').transition({ right: '0px' });
+    }
+
+    function hideSidebar() {
+        $('.sidebar').transition({ right: '-640px' });
+    }
+
+    $(".content").click(function(e){
+        if(document.width - e.pageX > 640){
+            hideSidebar();
+        }
+    });
+
+    $("#more").click(function(e){
+        e.preventDefault();
+        showSidebar();
+    });
+
+    $("#less").click(function(e){
+        e.preventDefault();
+        hideSidebar();
+    });
+
     window.addEventListener('mousemove', drawStuff, false);
     document.addEventListener('touchmove', drawStuff, false);
+
+    var hammertime = $("body").hammer({
+        stop_browser_behavior: false,
+        prevent_mouseevents: true
+    });
+
+    hammertime.on("swipeleft", showSidebar);
+
+    hammertime.on("swiperight", hideSidebar);
 
     function drawStuff(e) {
 
         x = 500;
         y = 0;
-      offset_x = 0;
+        offset_x = 0;
 
         if (e && e.type === "mousemove") {
             x = e.clientX;

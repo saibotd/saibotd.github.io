@@ -8,30 +8,83 @@
   <title>Tobias Dühr - Webentwicklung und Konzeption</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" media="screen" type="text/css" />
-  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" media="screen" type="text/css">
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css">
 
 </head>
 
 <body>
 
   <canvas id="stage" width="500" height="500"></canvas>
-<div class="content">
+  <div class="content">
     <div class="wrapper">
-        <div class="centered">
-          <h1><span style="color:rgb(11,148,163)">Tobias</span> <span style="color:rgb(163,26,11)">Dühr</span>
-          </h1>
-          <p style="margin-top:-22px">Nerd for Hire</p>
-            <p>
-Hi, ich bin ein Web-Developer aus Aschaffenburg<br>und ich unterstütze Sie gern bei der<br>Konzeption und Umsetzung Ihres Digitalprojekts.</p>
-            <p> <a href="mailto:tobi@tobiasduehr.com">tobi@tobiasduehr.com</a> | <a href="tel:004960213713476">06021.3713476</a>
-
-            </p>
-        </div>
+      <div class="centered">
+        <h1>
+          <span style="color:rgb(11,148,163)">Tobias</span>
+          <span style="color:rgb(163,26,11)">Dühr</span>
+        </h1>
+        <p style="margin-top:-22px">
+          Nerd for Hire
+        </p>
+        <p>
+          Hi, ich bin ein Web-Developer aus Aschaffenburg<br>
+          und ich unterstütze Sie gern bei der<br>
+          Konzeption und Umsetzung Ihres Digitalprojekts.
+          <br>
+          <a id="more" href="#more">Mehr Infos</a>
+        </p>
+        <p>
+          E-Mail: <a href="mailto:tobi@tobiasduehr.com">tobi@tobiasduehr.com</a>
+          <br>
+          Telefon: <a href="tel:004960213713476">06021.3713476</a>
+        </p>
+      </div>
     </div>
-</div>
+<div class="sidebar">
+    <div class="sidebar-inner">
+      <a id="less" href="#less">Weniger Infos</a>
+      <h1>Hard Facts</h1>
+      <p>
+        In aller Kürze. Das bin ich. Das kann ich.
+      </p>
+      <ul>
+        <li>7 Jahre Agenturerfahrung</li>
+        <li>Tiefgreifendes Verständnis für die Funktionsweise des Web</li>
+        <li>Erfahrung in der Konzeption und Umsetzung großer Projekte</li>
+        <li>Programmiersprachen: PHP, JavaScript, Python, Java, Lua, Go</li>
+        <li>Frameworks: CodeIgniter, Symfony, Drupal, Kohana, CakePHP, Joomla, Contao, Facebook Apps, Flask, web.py, node.js, Vaadin, Android SDK</li>
+        <li>Weitere Skills: User Experience, Linux (Webserverkonfiguration), API Design</li>
+        <li>Star Trek &gt; Star Wars</li>
+      </ul>
+      <h1>Private Projekte</h1>
+      <p>
+        Programmieren ist für mich nicht einfach ein Job, sondern Passion.
+      </p>
+      <ul>
+        <li><a href="https://play.google.com/store/apps/details?id=com.saibotd.reddmagplus">redditmag+</a>: Eine App für Android</li>
+        <li><a href="http://hackerhub.org">hackerhub</a>: Freie Content-Plattform</li>
+        <li><a href="http://gamesuggest.net">Game Suggest</a>: Die Klärung der Frage "Was spiele ich als nächstes?"</li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.saibotd.bitbeaker">Bitbeaker</a>: Bitbucket App für Android</li>
+        <li><a href="http://redditmag.saibotd.com">Redditmag</a>: ein Reddit JSON-API Experiment</li>
+        <li><a href="http://sourceforge.net/projects/couchpytato/">Couchpytato</a>: HTPC-Software in Python/PyGame</li>
+      </ul>
+      <p>
+        Mehr bei <a href="https://bitbucket.org/saibotd">Bitbucket</a> und <a href="https://github.com/saibotd">GitHub</a>.
+      </p>
+      <h1>Projekte für Kunden</h1>
+      <p>
+        Ein Portfolio meiner bisherigen Kundenprojekte sende ich Ihnen aber gerne als PDF zu.
+      </p>
+    </div>
+  </div>
 
+  </div>
+  
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.transit.min.js"></script>
+  <script src="js/jquery.hammer.min.js"></script>
   <script src="js/index.js"></script>
 
 </body>
