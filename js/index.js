@@ -88,6 +88,7 @@
     $(".topbar > nav > a").click(function(e){
         e.preventDefault();
         var href = this.href;
+        if(!sideBarVisible) $('.sidebar-inner').html("");
         showSidebar();
         $(".sidebar").addClass("loading");
         $('.sidebar-inner').transition({opacity:0},function(){
