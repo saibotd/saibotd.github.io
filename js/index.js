@@ -18,7 +18,7 @@
     }
 
     $(".content").click(function(e){
-        if(document.width - e.pageX > 640){
+        if(e.target.id != "more" && document.width - e.pageX > 640){
             hideSidebar();
         }
     });
