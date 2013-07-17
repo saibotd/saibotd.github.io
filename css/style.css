@@ -25,6 +25,10 @@ img{
     max-width: 100%;
 }
 
+a{
+    outline: 0;
+}
+
 #stage {
     overflow: hidden;
     position: absolute;
@@ -142,7 +146,8 @@ img{
     height: 0; 
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent; 
-    border-right:40px solid #DDD; 
+    border-right:40px solid #DDD;
+    border-style: inset;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -o-transition: all .5s;
