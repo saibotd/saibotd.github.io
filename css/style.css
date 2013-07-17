@@ -21,6 +21,10 @@ ul li{
     margin-bottom: 5px;
 }
 
+img{
+    max-width: 100%;
+}
+
 #stage {
     overflow: hidden;
     position: absolute;
@@ -67,10 +71,19 @@ ul li{
 
 .topbar nav a{
     line-height: 40px;
-    display: inline-block;
+    float: left;
     padding: 0 10px;
     color: #EEE;
     text-decoration: none;
+    transition: background-color .5s;
+    -webkit-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    -o-transition: background-color .5s;
+}
+
+.topbar nav a:hover{
+    background-color: #111;
+    color: #FFF;
 }
 
 .sidebar {
@@ -84,7 +97,13 @@ ul li{
     max-width: 640px;
     background: #FFF;
     background: rgba(255,255,255,.96);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
     box-shadow: 0 0 4px rgba(0,0,0,.25);
+}
+
+.sidebar.loading{
+    background-image: url(../img/loader.gif);
 }
 
 .sidebar p {

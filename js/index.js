@@ -11,15 +11,19 @@
     resizeCanvas();
 
     function showSidebar() {
-        $('.sidebar').transition({ right: '0px' });
-        sideBarVisible = true;
-        $("#toggle-sidebar").attr("class", "visible");
+        if(!sideBarVisible){
+            $('.sidebar').transition({ right: '0px' });
+            sideBarVisible = true;
+            $("#toggle-sidebar").attr("class", "visible");
+        }
     }
 
     function hideSidebar() {
-        $('.sidebar').transition({ right: '-640px' });
-        sideBarVisible = false;
-        $("#toggle-sidebar").attr("class", "hidden");
+        if(sideBarVisible){
+            $('.sidebar').transition({ right: '-640px' });
+            sideBarVisible = false;
+            $("#toggle-sidebar").attr("class", "hidden");
+        }
     }
 
     $(".content").click(function(e){
@@ -80,4 +84,14 @@
         c.fill();
 
     }
+
+    $(".topbar > nav > a").click(function(e){
+        e.preventDefault();
+        showSidebar();
+        //$('..sidebar-inner').transition({ opacity: 0 });
+        $(".sidebar").addClass("loading");
+        $(".sidebar-inner").load(this.href, function(){
+            $(".sidebar").removeClass("loading");
+        });
+    });
 })();
