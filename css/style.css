@@ -146,8 +146,7 @@ a{
     height: 0; 
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent; 
-    border-right:40px solid #DDD;
-    border-style: inset;
+    border-right:40px outset #DDD;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -o-transition: all .5s;
