@@ -1,4 +1,5 @@
 (function () {
+    var sideBarVisible = false;
     var canvas = document.getElementById('stage'),
     c = canvas.getContext('2d');
     window.addEventListener('resize', resizeCanvas, false);
@@ -11,10 +12,14 @@
 
     function showSidebar() {
         $('.sidebar').transition({ right: '0px' });
+        sideBarVisible = true;
+        $("#toggle-sidebar").attr("class", "visible");
     }
 
     function hideSidebar() {
         $('.sidebar').transition({ right: '-640px' });
+        sideBarVisible = false;
+        $("#toggle-sidebar").attr("class", "hidden");
     }
 
     $(".content").click(function(e){
@@ -23,14 +28,10 @@
         }
     });
 
-    $("#more").click(function(e){
+    $("#toggle-sidebar").click(function(e){
         e.preventDefault();
-        showSidebar();
-    });
-
-    $("#less").click(function(e){
-        e.preventDefault();
-        hideSidebar();
+        if(sideBarVisible) hideSidebar();
+        else showSidebar();
     });
 
     window.addEventListener('mousemove', drawStuff, false);

@@ -49,6 +49,7 @@ ul{
   position:relative;
   display:table-cell;
   vertical-align:middle;
+  padding: 0 25px;
 }
 
 .sidebar {
@@ -79,5 +80,37 @@ ul{
 }
 
 .sidebar-inner{
-    padding: 25px;
+    padding: 25px 50px 25px 25px;
+}
+
+#toggle-sidebar{
+    position: fixed;
+    z-index: 40;
+    right: 25px;
+    top: 25px;
+    width: 40px;
+    height: 40px;
+    line-height: 32px;
+    text-align: center;
+    
+    border: 1px solid #DDD;
+    color: #DDD;
+    text-decoration: none;
+    font-size: 40px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+#toggle-sidebar.hidden{
+    
+}
+
+#toggle-sidebar.visible{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
