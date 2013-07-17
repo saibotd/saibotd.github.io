@@ -17,6 +17,10 @@ ul{
     padding-left: 20px;
 }
 
+ul li{
+    margin-bottom: 5px;
+}
+
 #stage {
     overflow: hidden;
     position: absolute;
@@ -64,6 +68,9 @@ ul{
     background: #FFF;
     background: rgba(255,255,255,.96);
     box-shadow: 0 0 4px rgba(0,0,0,.25);
+}
+
+.sidebar p {
     line-height: 150%;
 }
 
@@ -80,7 +87,7 @@ ul{
 }
 
 .sidebar-inner{
-    padding: 25px 50px 25px 25px;
+    padding: 25px 60px 25px 25px;
 }
 
 #toggle-sidebar{
@@ -113,4 +120,13 @@ ul{
     -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+#language{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    font-size: 10pt;
 }
