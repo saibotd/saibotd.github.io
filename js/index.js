@@ -89,11 +89,10 @@
         e.preventDefault();
         showSidebar();
         $(".sidebar").addClass("loading");
-        $('.sidebar-inner').transition({opacity:0},function(){
-            $(".sidebar-inner").load(this.href, function(){
-                $(".sidebar").removeClass("loading");
-                $('.sidebar-inner').transition({opacity:0});
-            });
+        $('.sidebar-inner').transition({opacity:0});
+        $(".sidebar-inner").load(this.href, function(){
+            $(".sidebar").removeClass("loading");
+            $('.sidebar-inner').transition({opacity:1});
         });
     });
 })();
