@@ -87,12 +87,15 @@
 
     $(".topbar > nav > a").click(function(e){
         e.preventDefault();
+        var href = this.href;
         showSidebar();
         $(".sidebar").addClass("loading");
-        $('.sidebar-inner').transition({opacity:0});
-        $(".sidebar-inner").load(this.href, function(){
-            $(".sidebar").removeClass("loading");
-            $('.sidebar-inner').transition({opacity:1});
+        $('.sidebar-inner').transition({opacity:0},function(){
+            $(".sidebar-inner").load(href, function(){
+                $(".sidebar").removeClass("loading");
+                $('.sidebar-inner').transition({opacity:1});
+            });
         });
     });
+    $(".sidebar-inner").load("content/home.html");
 })();
