@@ -94,12 +94,18 @@ img{
     top: 40px;
     bottom: 0;
     overflow: auto;
-    max-width: 640px;
+    width: 640px;
     background: #FFF;
     background: rgba(255,255,255,.96);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     box-shadow: 0 0 4px rgba(0,0,0,.25);
+}
+
+@media (max-width:640px) {
+    .sidebar {
+        width: 100%;
+    }
 }
 
 .sidebar.loading{
@@ -127,10 +133,9 @@ img{
 }
 
 #toggle-sidebar{
-    position: fixed;
-    z-index: 40;
+    position: absolute;
     right: 25px;
-    top: 65px;
+    bottom: -75px;
     line-height: 32px;
     text-align: center;
     width: 0; 
@@ -158,9 +163,8 @@ img{
 
 #language{
     display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
     padding: 10px;
     font-size: 10pt;
+    float:right;
+    color: #FFF;
 }
