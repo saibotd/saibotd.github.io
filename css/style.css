@@ -74,7 +74,7 @@ a{
     height: 40px;
 }
 
-.topbar nav a{
+.topbar .nav a{
     line-height: 40px;
     float: left;
     padding: 0 10px;
@@ -86,7 +86,7 @@ a{
     -o-transition: background-color .5s;
 }
 
-.topbar nav a:hover{
+.topbar .nav a:hover{
     background-color: #111;
     color: #FFF;
 }

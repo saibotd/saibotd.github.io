@@ -82,7 +82,7 @@ function initSidebar(){
 
 function initNavigation(){
     var $sidebar = $('.sidebar');
-    $(".topbar > nav > a").click(function(e){
+    $(".topbar > .nav > a").click(function(e){
         e.preventDefault();
         var href = this.href;
         if(!sideBarVisible) $('.sidebar-inner').html("");
@@ -97,7 +97,7 @@ function initNavigation(){
         });
         history.pushState({}, $(this).text(), href);
     });
-    if(typeof thisIsIndex !== undefined){
+    if(thisIsIndex){
         $sidebar.load("home.html .sidebar-inner");
         hideSidebar();
     }
