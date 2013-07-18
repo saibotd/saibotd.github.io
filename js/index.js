@@ -95,12 +95,9 @@ function initNavigation(){
                 $sidebar.removeClass("loading");
             });
         });
-        history.pushState({}, $(this).text(), href);
+        if(!!history.pushState) history.pushState({}, $(this).text(), href);
     });
-    if(thisIsIndex){
-        $sidebar.load("home.html .sidebar-inner");
-        hideSidebar();
-    }
+    if(thisIsIndex) hideSidebar();
 }
 
 function initSwipe(){
@@ -121,5 +118,5 @@ function initSwipe(){
     initSidebar();
     initNavigation();
     initSwipe();
-    
+
 })();
