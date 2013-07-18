@@ -97,7 +97,7 @@ function initNavigation(){
         });
         if(!!history.pushState) history.pushState({}, $(this).text(), href);
     });
-    if(thisIsIndex) hideSidebar();
+    if(window.location.pathname === "/") hideSidebar();
 }
 
 function initSwipe(){
