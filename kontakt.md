@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tobias Dühr - Freelancer und Webentwickler aus Aschaffenburg
+title: Tobias Dühr - Kontakt - Freelancer und Webentwickler aus Aschaffenburg
 ---
 
 # Kontakt
