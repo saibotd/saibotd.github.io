@@ -25,7 +25,6 @@
             $("#toggle-sidebar").attr("class", "hidden");
         }
     }
-    hideSidebar();
 
     $(".content").click(function(e){
         if(e.target.id != "more" && document.width - e.pageX > 640){
@@ -93,11 +92,17 @@
         showSidebar();
         $(".sidebar").addClass("loading");
         $('.sidebar-inner').transition({opacity:0},function(){
-            $(".sidebar-inner").load(href, function(){
-                $(".sidebar").removeClass("loading");
+            $(".sidebar").load(href + " .sidebar-inner", function(){
+                $('.sidebar-inner').css("opacity", 0);
                 $('.sidebar-inner').transition({opacity:1});
+                $(".sidebar").removeClass("loading");
             });
         });
+        history.pushState({}, $(this).text(), href);
     });
-    $(".sidebar-inner").load("content/home.html");
+
+    if(thisIsIndex){
+        $(".sidebar").load("home.html .sidebar-inner");
+        hideSidebar();
+    }
 })();
