@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Design, development and content by Tobias Duehr
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Hammer.js, jQuery Transit
