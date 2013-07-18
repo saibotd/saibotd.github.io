@@ -71,6 +71,7 @@ a{
     right: 0;
     background: #333;
     z-index: 40;
+    height: 40px;
 }
 
 .topbar nav a{
@@ -94,7 +95,7 @@ a{
     color: #666;
     position: absolute;
     z-index: 20;
-    right: 0px;
+    right: 0;
     top: 40px;
     bottom: 0;
     overflow: auto;
