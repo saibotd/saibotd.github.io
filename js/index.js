@@ -1,5 +1,5 @@
 (function () {
-    var sideBarVisible = false;
+    var sideBarVisible = true;
     var canvas = document.getElementById('stage'),
     c = canvas.getContext('2d');
     window.addEventListener('resize', resizeCanvas, false);
@@ -25,6 +25,7 @@
             $("#toggle-sidebar").attr("class", "hidden");
         }
     }
+    hideSidebar();
 
     $(".content").click(function(e){
         if(e.target.id != "more" && document.width - e.pageX > 640){
