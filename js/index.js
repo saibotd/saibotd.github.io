@@ -82,7 +82,7 @@ function initSidebar(){
 
 function initNavigation(){
     var $sidebar = $('.sidebar');
-    $(".topbar > .nav > a").click(function(e){
+    $(".topbar > .nav a").click(function(e){
         e.preventDefault();
         var href = this.href;
         if(!sideBarVisible) $('.sidebar-inner').html("");
