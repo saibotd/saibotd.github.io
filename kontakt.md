@@ -5,12 +5,9 @@ title: Tobias Dühr - Kontakt - Freelancer und Webentwickler aus Aschaffenburg
 
 <div itemscope itemtype="http://schema.org/Person">
 
+<h1>Kontakt</h1>
 
-# Kontakt
-
-
-## Anschrift
-
+<h2>Anschrift</h2>
 
 <span itemprop="name">Tobias Dühr</span>
 
