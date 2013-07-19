@@ -31,33 +31,35 @@
   <canvas id="stage" width="500" height="500"></canvas>
   <div class="topbar">
     <div class="nav">
-      <a href="/">Home</a>
-      <a href="profil.html">Profil</a>
-      <a href="referenzen.html">Referenzen</a>
-      <a href="kontakt.html">Kontakt</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="profil.html">Profil</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
     </div>
     <a id="toggle-sidebar" class="visible" href="#sidebar"></a>
     <a id="language" href="index-en.html">English speaking? Click Here.</a>
   </div>
   <div class="content">
     <div class="wrapper">
-      <div class="centered">
-        <h1>
+      <div class="centered" itemscope itemtype="http://data-vocabulary.org/Person">
+        <h1 itemprop="name">
           <span style="color:rgb(11,148,163)">Tobias</span>
           <span style="color:rgb(163,26,11)">Dühr</span>
         </h1>
-        <p style="margin-top:-22px">
+        <p style="margin-top:-22px" itemprop="nickname">
           Nerd for Hire
         </p>
         <p>
-          Hi, ich bin ein Web-Developer aus Aschaffenburg<br>
+          Hi, ich bin ein <span itemprop="jobTitle">Web-Developer</span> aus Aschaffenburg<br>
           und ich unterstütze Sie als Freelancer gern bei der<br>
           Konzeption und Umsetzung Ihres Digitalprojekts.
         </p>
         <p>
-          Telefon: <a href="tel:004960213713476">06021.3713476</a>
+          Telefon: <a href="tel:004960213713476" itemprop="telephone">06021.3713476</a>
           <br>
-          E-Mail: <a href="mailto:tobi@tobiasduehr.com?subject=Hallo">tobi@tobiasduehr.com</a>
+          E-Mail: <a href="mailto:tobi@tobiasduehr.com?subject=Hallo" itemprop="email">tobi@tobiasduehr.com</a>
         </p>
       </div>
     </div>
