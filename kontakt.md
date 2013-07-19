@@ -13,7 +13,7 @@ title: Tobias Dühr - Kontakt - Freelancer und Webentwickler aus Aschaffenburg
 
 <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 
-<span itemprop="streetAddress">Hanauer Str. 7</span>
+<span itemprop="streetAddress">Hanauer Str. 7</span>  
 
 <span itemprop="postalCode">63739</span> <span itemprop="addressLocality">Aschaffenburg</span>
 
