@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.desc }}">
+  <meta name="author" content="Tobias Dühr">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
   <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" media="screen" type="text/css">-->
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css" media="screen" type="text/css">
@@ -36,12 +37,20 @@
         <a href="profil.html">Profil</a>
         <a href="referenzen.html">Referenzen</a>
         <a href="kontakt.html">Kontakt</a>
+        <!--<a href="blog.html">Blog</a>-->
       </nav>
     </div>
     <a id="toggle-sidebar" class="visible" href="#sidebar"></a>
     <a id="language" href="index-en.html">English speaking? Click Here.</a>
   </div>
   <div class="content">
+    <div class="sidebar">
+      <div class="sidebar-inner">
+
+        {{ content }}
+
+      </div>
+    </div>
     <div class="wrapper">
       <div class="centered" itemscope itemtype="http://data-vocabulary.org/Person">
         <h1 itemprop="name">
@@ -61,13 +70,6 @@
           <br>
           E-Mail: <a href="mailto:tobi@tobiasduehr.com?subject=Hallo" itemprop="email">tobi@tobiasduehr.com</a>
         </p>
-      </div>
-    </div>
-    <div class="sidebar">
-      <div class="sidebar-inner">
-
-        {{ content }}
-
       </div>
     </div>
   </div>
