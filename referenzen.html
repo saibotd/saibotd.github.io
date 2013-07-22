@@ -1,30 +1,29 @@
 ---
 layout: default
-title: Tobias Dühr - Referenzen - Freelancer und Webentwickler aus Aschaffenburg
+title: Tobias Dühr - Referenzen - Freiberufler und Webentwickler aus Aschaffenburg
 desc: Unter meinen Referenzen finden sich u.a. Android Apps, Web-Applikationen und eher frontent-lastige Websites
 ---
 
 <h1>Referenzen</h1>
 
-<h2>Projekte für Kunden</h2>
-
 <p>
-	Ein Portfolio meiner bisherigen Kundenprojekte sende ich Ihnen <a href="mailto:tobi@tobiasduehr.com?subject=Portfolio%20Anfrage">gern per E-Mail zu</a>.
+	Leider kann ich hier keine Projekte veröffentlichen, an denen ich in Festanstellung mitgewirkt habe.
+	Ein umfangreiches Portfolio sende ich Ihnen aber <a href="mailto:tobi@tobiasduehr.com?subject=Portfolio%20Anfrage">gern per E-Mail zu</a>.
 </p>
 
-<h2>Private Projekte</h2>
+<h2>Eigene Projekte</h2>
 
 <p>
 	Programmieren ist für mich nicht einfach ein Job, sondern Passion.
 </p>
 
-<ul>
-	<li><a target="_blank" href="https://play.google.com/store/apps/details?id=com.saibotd.reddmagplus">redditmag+</a>: Eine App für Android</li>
-	<li><a target="_blank" href="http://hackerhub.org">hackerhub</a>: Freie Content-Plattform</li>
-	<li><a target="_blank" href="http://gamesuggest.net">Game Suggest</a>: Die Klärung der Frage &quot;Was spiele ich als nächstes?&quot;</li>
-	<li><a target="_blank" href="https://play.google.com/store/apps/details?id=com.saibotd.bitbeaker">Bitbeaker</a>: Bitbucket App für Android</li>
-	<li><a target="_blank" href="http://redditmag.saibotd.com">Redditmag</a>: ein Reddit JSON-API Experiment</li>
-	<li><a target="_blank" href="https://github.com/saibotd/couchpytato">Couchpytato</a>: HTPC-Software in Python/PyGame</li>
+<ul class="work">
+	{% for post in site.categories.work %}
+	<li>
+		<a href="{{ post.url }}">{{ post.title }}</a>
+		 - {{ post.desc }}
+	</li>
+	{% endfor %}
 </ul>
 
 <p>

@@ -1,4 +1,7 @@
 var sideBarVisible = true;
+var sideBarWidthNormal = 640;
+var sideBarWidthWide = 840;
+var popState = false;
 
 function initBackgroundFX(){
     resizeCanvas = function() {
@@ -21,7 +24,7 @@ function initBackgroundFX(){
             y = touch.clientY;
         }
 
-        c.fillStyle = 'rgba(163,26,11,.25)';
+        c.fillStyle = 'rgba(163,26,11,.15)';
         c.beginPath();
         c.moveTo(0, canvas.height);
         c.lineTo(x, y);
@@ -29,7 +32,7 @@ function initBackgroundFX(){
         c.closePath();
         c.fill();
 
-        c.fillStyle = 'rgba(11,148,163,.25)';
+        c.fillStyle = 'rgba(11,148,163,.15)';
         c.beginPath();
         c.moveTo(canvas.width, canvas.height);
         c.lineTo(x, y);
@@ -53,22 +56,24 @@ function initSidebar(){
     var $toggleSidebar = $('#toggle-sidebar');
     showSidebar = function() {
         if(!sideBarVisible){
-            $sidebar.transition({ right: '0px' });
+            $sidebar.removeClass("hidden");
+            $toggleSidebar.removeClass("hidden");
             sideBarVisible = true;
-            $toggleSidebar.attr("class", "visible");
         }
     };
 
     hideSidebar = function() {
+        var sideBarWidth = ($('body').hasClass("wide") ? sideBarWidthWide : sideBarWidthNormal);
         if(sideBarVisible){
-            $sidebar.transition({ right: '-640px' });
+            $sidebar.addClass("hidden");
+            $toggleSidebar.addClass("hidden");
             sideBarVisible = false;
-            $toggleSidebar.attr("class", "hidden");
         }
     };
 
     $content.click(function(e){
-        if(e.target.id != "more" && document.width - e.pageX > 640){
+        var sideBarWidth = ($('body').hasClass("wide") ? sideBarWidthWide : sideBarWidthNormal);
+        if(e.target.id != "more" && document.width - e.pageX > sideBarWidth){
             hideSidebar();
         }
     });
@@ -80,23 +85,39 @@ function initSidebar(){
     });
 }
 
-function initNavigation(){
+function navigate(href){
     var $sidebar = $('.sidebar');
-    $(".topbar > .nav a").click(function(e){
-        e.preventDefault();
-        var href = this.href;
-        if(!sideBarVisible) $('.sidebar-inner').html("");
-        showSidebar();
-        $sidebar.addClass("loading");
-        $('.sidebar-inner').transition({opacity:0},function(){
-            $sidebar.load(href + " .sidebar-inner", function(){
-                $('.sidebar-inner').css("opacity", 0);
-                $('.sidebar-inner').transition({opacity:1});
-                $sidebar.removeClass("loading");
-            });
+    if(!sideBarVisible) $('.sidebar-inner').html("");
+    showSidebar();
+    $sidebar.addClass("loading");
+    $('.sidebar-inner').transition({opacity:0},function(){
+        $sidebar.load(href + " .sidebar-inner", function(){
+            $('.sidebar-inner').css("opacity", 0);
+            $('.sidebar-inner').transition({opacity:1});
+            $sidebar.removeClass("loading");
+            $(".work > li > a").ajaxify();
         });
-        if(!!history.pushState) history.pushState({}, $(this).text(), href);
     });
+}
+
+$.fn.ajaxify = function() {
+    $(this).click(function(e){
+        e.preventDefault();
+        navigate(this.href);
+        if(!!history.pushState) history.pushState(null, null, this.href);
+        $("body").removeClass("wide");
+        if($(this).hasClass("wide")) $("body").addClass("wide");
+    });
+};
+
+function initNavigation(){
+    $(".topbar > .nav a, .work > li > a").ajaxify();
+
+    window.addEventListener('popstate', function(e) {
+        if(popState) navigate(window.location.pathname);
+        else popState = true;
+    });
+
     if(window.location.pathname === "/") hideSidebar();
 }
 
