@@ -1,0 +1,23 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Dühr;Tobias;;
+FN:Tobias Dühr
+ORG:Nerd For Hire;Web Development
+TITLE:Freelancer
+TEL;WORK;VOICE:004960213713476
+ADR;WORK:;;Hanauer Str. 7;Aschaffenburg;;63739;
+LABEL;WORK;ENCODING=QUOTED-PRINTABLE:Nerd For Hire Web Development=0D=0A=
+ Tobias Dühr=0D=0A=
+ Hanauer Str. 7=0D=0A=
+ 63739 Aschaffenburg
+ADR;HOME:;;;;;;
+LABEL;HOME;ENCODING=QUOTED-PRINTABLE: Tobias Dühr=0D=0A=
+=0D=0A=
+
+X-WAB-GENDER:2
+URL;WORK:http://tobiasduehr.com
+EMAIL;PREF;INTERNET:tobi@tobiasduehr.com
+NOTE;ENCODING=QUOTED-PRINTABLE:Webentwicklung, JavaScript, PHP, Android
+PHOTO;VALUE=URL;TYPE=JPEG:http://m.b2werbeagentur.de/media/r/365/800/800/s
+REV:20130723T222757Z
+END:VCARD

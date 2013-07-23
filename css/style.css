@@ -71,7 +71,6 @@ a{
     right: 0;
     background: #333;
     z-index: 40;
-    height: 40px;
 }
 
 .topbar .nav a{
@@ -186,6 +185,9 @@ body.wide .sidebar.hidden{
     }
     body.wide .sidebar-inner{
         padding: 50px 25px 25px 25px;
+    }
+    .qrcode{
+        display: none;
     }
 }
 
