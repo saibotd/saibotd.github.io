@@ -39,6 +39,7 @@ function initBackgroundFX(){
         c.lineTo(canvas.width / 2 + offset_x, canvas.height);
         c.closePath();
         c.fill();
+
     };
     if(!!window.CanvasRenderingContext2D){
         var canvas = document.getElementById('stage'),
