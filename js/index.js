@@ -113,6 +113,8 @@ $.fn.ajaxify = function() {
 function initNavigation(){
     $(".topbar > .nav a, .work > li > a").ajaxify();
 
+    if(window.location.pathname === "/") hideSidebar();
+
     if ("popState" in window || "popstate" in window) {
         window.addEventListener('popstate', function(e) {
             if(popState) navigate(window.location.pathname);
@@ -120,7 +122,6 @@ function initNavigation(){
         });
     }
 
-    if(window.location.pathname === "/") hideSidebar();
 }
 
 function initSwipe(){
