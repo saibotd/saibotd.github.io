@@ -113,10 +113,12 @@ $.fn.ajaxify = function() {
 function initNavigation(){
     $(".topbar > .nav a, .work > li > a").ajaxify();
 
-    window.addEventListener('popstate', function(e) {
-        if(popState) navigate(window.location.pathname);
-        else popState = true;
-    });
+    if ("popstate" in window) {
+        window.addEventListener('popstate', function(e) {
+            if(popState) navigate(window.location.pathname);
+            else popState = true;
+        });
+    }
 
     if(window.location.pathname === "/") hideSidebar();
 }
