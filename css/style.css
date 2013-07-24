@@ -23,10 +23,25 @@ ul li{
 
 img{
     max-width: 100%;
+    border: none;
 }
 
 a{
     outline: 0;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border: 1px solid #FFF;
 }
 
 #stage {
