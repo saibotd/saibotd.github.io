@@ -6,6 +6,7 @@
     background: #BBB;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    overflow: hidden;
 }
 
 h1,h2,h3{
@@ -46,6 +47,12 @@ a{
 
 #stage {
     overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+#stage3d{
+     overflow: hidden;
     position: absolute;
     z-index: 1;
 }
