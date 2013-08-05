@@ -370,7 +370,6 @@ function initBackgroundFX3D(){
                 $(".work > li > a").ajaxify();
             });
         });
-        ga('send', 'pageview', href);
     }
 
     $.fn.ajaxify = function() {
@@ -380,6 +379,7 @@ function initBackgroundFX3D(){
             if(!!history.pushState) history.pushState(null, null, this.href);
             $("body").removeClass("wide");
             if($(this).hasClass("wide")) $("body").addClass("wide");
+            ga('send', 'pageview', this.href);
         });
     };
 
