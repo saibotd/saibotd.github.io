@@ -368,10 +368,9 @@ function initBackgroundFX3D(){
                 $('.sidebar-inner').transition({opacity:1});
                 $sidebar.removeClass("loading");
                 $(".work > li > a").ajaxify();
+                ga('send', 'pageview', window.location.pathname);
             });
         });
-        console.log(href);
-        ga('send', 'pageview', href);
     }
 
     $.fn.ajaxify = function() {
