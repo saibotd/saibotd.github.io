@@ -7,7 +7,15 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     overflow: hidden;
+    /*color: #666;*/
 }
+
+html.blog,
+html.blog body {
+    background: #EEE;
+    overflow-y: auto;
+    height:auto;
+ }
 
 h1,h2,h3{
   font-weight: 300;
@@ -49,6 +57,10 @@ a{
     overflow: hidden;
     position: absolute;
     z-index: 1;
+}
+
+.blog #stage{
+    position: fixed;
 }
 
 #stage3d{
@@ -152,6 +164,7 @@ body.wide .sidebar.hidden{
     line-height: 150%;
 }
 
+.blog a,
 .sidebar a{
     transition: color .5s;
     -webkit-transition: color .5s;
@@ -160,6 +173,7 @@ body.wide .sidebar.hidden{
     color: rgb(11,148,163);
 }
 
+.blog a:hover,
 .sidebar a:hover{
     color: rgb(163,26,11);
 }
@@ -199,6 +213,16 @@ body.wide .sidebar.hidden{
     font-size: 10pt;
     float:right;
     color: #FFF;
+}
+
+.blog .container{
+    position: relative;
+    z-index: 30;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 120%;
+    padding: 10%;
+    padding-top: 60px;
 }
 
 @media (max-width:840px) {

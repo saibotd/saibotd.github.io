@@ -370,6 +370,7 @@ function initBackgroundFX3D(){
                 $(".work > li > a").ajaxify();
             });
         });
+        ga('send', 'pageview', href);
     }
 
     $.fn.ajaxify = function() {
