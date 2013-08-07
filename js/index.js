@@ -384,7 +384,7 @@ function initBackgroundFX3D(){
     };
 
     function initNavigation(){
-        $(".topbar > .nav a, .work > li > a").ajaxify();
+        $(".topbar > .nav a:not(a:last), .work > li > a").ajaxify();
 
         if(window.location.pathname === "/") hideSidebar();
 
@@ -410,7 +410,7 @@ function initBackgroundFX3D(){
 
 
     (function () {
-        if ((Math.random() < 0.2  || window.location.hash == "#3d") && window.WebGLRenderingContext) initBackgroundFX3D();
+        if ((Math.random() < 0.15  || window.location.hash == "#3d") && window.WebGLRenderingContext) initBackgroundFX3D();
         else initBackgroundFX2D();
         initSidebar();
         initNavigation();
