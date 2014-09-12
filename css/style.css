@@ -322,4 +322,5 @@ body.wide .sidebar.hidden{
     padding: 0 10px;
     text-align: left;
     background: url(../img/boring.png) no-repeat 0 100px;
+    background-size: 100% auto;
 }
