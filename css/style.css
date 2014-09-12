@@ -237,6 +237,26 @@ body.wide .sidebar.hidden{
     color: #FFF;
 }
 
+#impressum{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: block;
+    padding: 5px;
+    color: #FFF;
+    text-shadow: 0 0 1px rgba(0,0,0,.5);
+    font-size: 10pt;
+    text-decoration: none;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+#impressum:hover{
+    text-shadow: 0 0 4px rgba(0,0,0,1);
+}
+
 .blog .container{
     position: relative;
     z-index: 30;
@@ -287,4 +307,19 @@ body.wide .sidebar.hidden{
     .sidebar-inner{
         padding: 50px 25px 25px 25px;
     }
+}
+
+.boring{
+    overflow: auto;
+}
+
+.boring body{
+    overflow: auto;
+    background: #EEE;
+}
+
+.boring .wrapper{
+    padding: 0 10px;
+    text-align: left;
+    background: url(../img/boring.png) no-repeat 0 100px;
 }
